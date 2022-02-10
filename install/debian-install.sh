@@ -6,7 +6,7 @@
 # PREPARATIONS FOR INSTALLATION
 /usr/bin/apt install -y figlet
 /usr/bin/touch /etc/motd
-figlet Debian > /etc/motd
+figlet DEBIAN > /etc/motd
 /usr/bin/touch /etc/motd
 /usr/bin/cat <<EOF >> /etc/motd
 
@@ -41,7 +41,6 @@ EOF
 /usr/bin/echo 'Acquire::ForceIPv4 "true";' >> /etc/apt/apt.conf.d/99force-ipv4
 /usr/bin/apt install openssh-server nano
 update_and_clean
-apt-get install sudo
 /usr/bin/mv /etc/ssh/sshd_config  /etc/ssh/sshd_config.bak
 /usr/bin/touch  /etc/ssh/sshd_config
 /usr/bin/cat  <<EOF >/etc/ssh/sshd_config
