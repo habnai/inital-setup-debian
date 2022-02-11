@@ -82,3 +82,4 @@ TIMEZONE="Europe/Stockholm"
 echo $TIMEZONE > /etc/timezone
 cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
 /usr/sbin/ntpdate -u no.pool.ntp.org
+/usr/bin/apt autoremove -y
