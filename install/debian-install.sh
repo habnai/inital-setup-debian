@@ -41,7 +41,7 @@ EOF
 /usr/bin/echo 'Acquire::ForceIPv4 "true";' >> /etc/apt/apt.conf.d/99force-ipv4
 /usr/bin/apt install openssh-server nano
 update_and_clean
-/usr/bin/apt -t bullseye-backports upgrade
+/usr/bin/apt -t bullseye-backports upgrade -y
 /usr/bin/mv /etc/ssh/sshd_config  /etc/ssh/sshd_config.bak
 /usr/bin/touch  /etc/ssh/sshd_config
 /usr/bin/cat  <<EOF >/etc/ssh/sshd_config
