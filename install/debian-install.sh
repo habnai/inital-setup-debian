@@ -6,7 +6,7 @@
 # PREPARATIONS FOR INSTALLATION
 /usr/bin/apt install -y figlet
 /usr/bin/touch /etc/motd
-figlet DEBIAN > /etc/motd
+figlet Debian > /etc/motd
 /usr/bin/touch /etc/motd
 /usr/bin/cat <<EOF >> /etc/motd
 
@@ -67,6 +67,12 @@ MACs umac-128-etm@openssh.com,umac-128@openssh.com
 EOF
 ##RESTART SSHD
 /usr/bin/systemctl restart sshd
+# Installation der Basissoftware
+/usr/bin/apt  install -y build-essential autoconf automake libtool flex bison debhelper binutils
+/usr/bin/apt install -y snmp-mibs-downloader
+/usr/bin/apt install -y curl gpg
+/usr/bin/apt install -y apt-transport-https bash-completion bzip2 ca-certificates debian-archive-keyring dirmngr gnupg2 htop \
+libfontconfig1 libfuse2 locate lsb-release libfile-fcntllock-perl net-tools software-properties-common ssl-cert socat tree wget unzip zip & CrI
 ##ntp-time
 /usr/bin/apt  install -y ntp ntpdate
 service ntp start
@@ -76,9 +82,3 @@ TIMEZONE="Europe/Stockholm"
 echo $TIMEZONE > /etc/timezone
 cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
 /usr/sbin/ntpdate -u no.pool.ntp.org
-# Installation der Basissoftware
-/usr/bin/apt  install -y build-essential autoconf automake libtool flex bison debhelper binutils
-/usr/bin/apt install -y snmp-mibs-downloader
-/usr/bin/apt install -y curl gpg
-/usr/bin/apt install -y apt-transport-https bash-completion bzip2 ca-certificates debian-archive-keyring dirmngr git gnupg2 htop \
-libfontconfig1 libfuse2 locate lsb-release libfile-fcntllock-perl net-tools software-properties-common ssl-cert socat tree wget unzip zip & CrI
