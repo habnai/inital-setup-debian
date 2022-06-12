@@ -9,9 +9,6 @@
 figlet Debian > /etc/motd
 /usr/bin/touch /etc/motd
 /usr/bin/cat <<EOF >> /etc/motd
-
-           https://www.habnai.net
-
 EOF
 # Global function to update and clean the system
 function update_and_clean() {
