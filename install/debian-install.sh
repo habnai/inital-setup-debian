@@ -72,12 +72,6 @@ EOF
 libfontconfig1 libfuse2 locate lsb-release libfile-fcntllock-perl net-tools software-properties-common ssl-cert socat tree wget unzip zip & CrI
 /usr/bin/apt install net-tools
 ##ntp-time
-/usr/bin/apt  install -y ntp ntpdate
-service ntp start
-echo "tzdata tzdata/Areas select Europe" | debconf-set-selections
-echo "tzdata tzdata/Zones/Europe select Stockholm" | debconf-set-selections
-TIMEZONE="Europe/Stockholm"
-echo $TIMEZONE > /etc/timezone
-cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
-/usr/sbin/ntpdate -u no.pool.ntp.org
+
+
 /usr/bin/apt autoremove -y
