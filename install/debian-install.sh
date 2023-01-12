@@ -68,7 +68,6 @@ EOF
 /usr/bin/apt install -y snmp-mibs-downloader
 /usr/bin/apt install -y curl gpg
 /usr/bin/apt install -y python3-docker
-/usr/bin/apt install -y apt-transport-https bash-completion bzip2 ca-certificates debian-archive-keyring dirmngr gnupg2 htop \
-libfontconfig1 libfuse2 locate lsb-release libfile-fcntllock-perl net-tools software-properties-common ssl-cert socat tree wget unzip zip & CrI
+/usr/bin/apt install -y apt-transport-https bash-completion bzip2 ca-certificates debian-archive-keyring dirmngr gnupg2 htop libfontconfig1 libfuse2 locate lsb-release libfile-fcntllock-perl software-properties-common ssl-cert socat tree wget unzip zip
 /usr/bin/apt install net-tools -y
 /usr/bin/apt autoremove -y
