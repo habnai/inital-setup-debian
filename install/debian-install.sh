@@ -30,9 +30,9 @@ CrI() {
 /usr/bin/mv /etc/apt/sources.list /etc/apt/sources.list.bak
 /usr/bin/touch /etc/apt/sources.list
 /usr/bin/cat <<EOF >/etc/apt/sources.list
-deb http://deb.debian.org/debian bookworm contrib main non-free-firmware
-deb http://deb.debian.org/debian bookworm-updates contrib main non-free-firmware
-deb http://deb.debian.org/debian bookworm-backports contrib main non-free-firmware
+deb http://deb.debian.org/debian bookworm contrib main non-free-firmware non-free
+deb http://deb.debian.org/debian bookworm-updates contrib main non-free-firmware non-free
+deb http://deb.debian.org/debian bookworm-backports contrib main non-free-firmware 
 deb http://security.debian.org/debian-security/ bookworm-security contrib main non-free-firmware
 EOF
 /usr/bin/echo 'Acquire::ForceIPv4 "true";' >> /etc/apt/apt.conf.d/99force-ipv4
