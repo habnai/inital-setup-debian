@@ -34,3 +34,6 @@ iface enp0s3 inet6 auto
 EOF
 systemctl restart networking
 
+#### ssh-copy-id -i ~/.ssh/id_ed25519.pub user@10.11.20.35 ##
+
+
