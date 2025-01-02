@@ -64,7 +64,7 @@ EOF
 ##RESTART SSHD
 /usr/bin/systemctl restart sshd
 # Installation der Basissoftware
-/usr/bin/apt  install -y build-essential autoconf automake libtool flex bison debhelper binutils
+/usr/bin/apt  install -y build-essential autoconf automake libtool flex bison debhelper binutils aptitude
 /usr/bin/apt install -y snmp-mibs-downloader
 /usr/bin/apt install -y curl gpg
 /usr/bin/apt install -y python3-docker
